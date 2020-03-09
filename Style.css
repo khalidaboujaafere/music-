@@ -1,0 +1,259 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand|Raleway');
+body {
+	font-family:"Quicksand";
+	background-color:#fff;
+}
+.music-player{
+	width:100%;
+	height:100%;
+	position:absolute;
+	overflow:hidden;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-webkit-transform:translate(-50%,-50%);
+	-moz-transform:translate(-50%,-50%);
+	background:-webkit-linear-gradient(top,#4faef7, #aa6de8, #9b2ca5);
+	background:-moz-linear-gradient(top,#4faef7, #aa6de8, #9b2ca5);
+	background:linear-gradient(top,#4faef7, #aa6de8, #9b2ca5);
+	} 
+button{
+	position:absolute ;
+	right:5px;
+	top:10px;
+	border:0;
+	font-size:24px;
+	outline:none;
+	background-color:transparent;
+	color:#fff;
+	cursor:pointer;
+}
+
+.header{
+	height:100%;
+	width:300px;	
+	background-color:#fff;
+	position:absolute;
+	z-index:3;
+	transform:translate(-310px);
+	-webkit-transform:translate(-310px);
+	-moz-transform:translate(-310px); 
+	transition:.5s;
+	-webkit-transition:.5s;
+	-moz-transition:.5s;
+	overflow:hidden;
+	border-right:.2px solid #888;
+}
+.cover{
+	background:url("https://abduzeedo.com/sites/default/files/originals/0ec5c569226647.5b79b483096c1.jpg");
+	background-size:cover;
+	width:100%;
+	height:100px;
+}
+.cover h6{
+	position:absolute;
+	color:#fff;
+	top:50px;
+	left:10px;
+	text-transform:uppercase;
+	font-family:Sans-serif;
+} 
+.profile{
+	position:absolute;
+	border:.2px solid #4faef7;
+	overflow:hidden;
+	border-radius:50%;
+	width:25%;
+	top:20px;
+	left:10px;
+	cursor:pointer;
+	
+}
+.visible{
+	position:absolute ;
+	transform:translate(0px);
+	-webkit-transform:translate(0px);
+	-moz-transform:translate(0px);
+	transition:.5s;
+	-webkit-transition:.5s;
+	-moz-transition:.5s;
+} 
+.header ul {
+	display:block;
+	position:absolute;   
+	width:100%;
+	left:-40px;
+} 
+
+.header ul li{
+	list-style-type:none;
+	position:relative;
+	padding:8px 0 8px 15px;
+	margin-bottom:5px;
+	font-size:12px;
+	cursor:pointer;
+} 
+.header ul li i{
+	padding-right:15px;
+}
+.header ul li a{
+	text-decoration: none;
+	color: #222;
+	font-size: 16px;
+	}
+.header ul li:hover{
+	background-color: #ff6f62;
+}
+.active{
+	background-color:grey;
+	color:orange;
+	width:100%;
+}
+.track{	
+	position:relative;
+	display:block;
+	width:160px;
+	height:160px;	
+	top:50px;
+	left:110px;
+	border-radius:50%;	
+	overflow:hidden;   
+	z-index:1;
+	border:5px outset #ff6f62;
+	transition:.5s;
+	-webkit-transition:.5s;
+	-moz-transition:.5s;
+	-o-transition:.5s;
+}
+.track:before{
+	position:absolute ;
+	background-color:#e24d6d;
+	top:0;
+	left:0;
+	display:block;
+	content:"";
+	width:100%;
+	height:100%;
+	border-radius:50%;   
+	z-index:-1;
+	transition:.5s;
+	-webkit-transition:.5s;
+	-moz-transition:.5s;
+	-o-transition:.5s;
+   -webkit-transform:scale(.9);
+   -moz-transform:scale(.9);
+	-o-transform:scale(.9);
+}
+.track:hover{
+	border:3px solid #e24d6d;
+	box-shadow:0 0 5px #e24d6d;
+	-webkit-box-shadow:0 0 5px #e24d6d;
+	-moz-box-shadow:0 0 5px #e24d6d;
+	-o-box-shadow:0 0 5px #e24d6d;	
+	cursor:pointer;
+}
+.track:hover:before{	
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-o-transform:scale(1.1);
+	box-shadow:0 0 15px #e24d6d;
+	-webkit-box-shadow:0 0 15px #e24d6d;
+	-moz-box-shadow:0 0 15px #e24d6d;
+	-o-box-shadow:0 0 15px #e24d6d;
+}
+.track img{
+	width:160px;
+	height:160px;
+	position:relative;
+	border-radius:220px;
+	top:0px;
+}
+
+.track-detail{
+	position:relative;
+	z-index:2;
+	top:40px;
+	text-transform:uppercase;
+	text-align:center;
+	color:#fff;	
+}
+.track-detail h6{
+	position:relative;
+	top:-15px;
+	padding:0;
+	margin:0;	  
+}
+
+.track-detail ul{
+	display:flex;   
+	position:relative; 
+	top:-20px;	
+}
+.track-detail ul li{
+	position:relative ;
+	list-style-type:none;
+	flex:1;
+	top:20px;  
+	left:-20px;  
+	cursor:pointer;  
+}
+
+.track-detail ul li .fa{
+	font-size:20px;
+}
+.color-change{
+	color:red;
+}
+.upcoming{
+	width:100%;
+	height:150px;
+	position:absolute;
+	bottom:0px;
+	background-color:#fff;
+	overflow-x:scroll;
+	overflow-y:hidden;
+}
+.upcoming ul{
+	position:relative;
+	display:flex;
+	top:-8px;
+	
+}
+.upcoming ul li img{
+	position:relative;
+	left:-30px;
+	width:120px;
+	height:120px;
+	box-shadow:;
+	margin-right:10px;
+	
+}
+
+.upcoming ul li{
+	position:relative ;
+	list-style-type:none;
+	flex:1;  
+	cursor:pointer;	 
+}
+/*--------تدوير صورة plniing------*/
+.track{
+		  -webkit-animation: spin 2s linear infinite;
+   -webkit-animation-play-state: running;   
+	animation: spin 2s linear infinite;
+	animation-play-state: running ;
+}
+@-webkit-keyframes spin {
+	0% { -webkit-transform: rotate(0deg) ;
+	 }
+	
+	100% { -webkit-transform: rotate(360deg) ; 
+	}
+}
+
+@keyframes spin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg) ; }
+}
+
